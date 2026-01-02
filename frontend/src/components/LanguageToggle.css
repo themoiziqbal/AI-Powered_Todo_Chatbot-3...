@@ -1,0 +1,56 @@
+/**
+ * Language Toggle Styles
+ * Feature: 006-bonus-features - Multi-language Support
+ */
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-toggle__select {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 150px;
+  outline: none;
+  backdrop-filter: blur(10px);
+}
+
+.language-toggle__select:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.language-toggle__select:focus {
+  border-color: #ED985F;
+  box-shadow: 0 0 0 3px rgba(237, 152, 95, 0.2);
+}
+
+.language-toggle__select option {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #001F3D;
+  background: white;
+}
+
+/* RTL support */
+.rtl .language-toggle__select {
+  direction: rtl;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .language-toggle__select {
+    min-width: 120px;
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
